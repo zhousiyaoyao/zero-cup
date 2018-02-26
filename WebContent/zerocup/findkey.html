@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>找回密码</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/logo11.ico" />
+<link rel="stylesheet" type="text/css" href="css/findkey.css">
+</head>
+<body>
+	<div class="bg1" id="bg1" onresize="adjustWidth(width)">
+		<img src="images/findkey/findkey.jpg">
+		<ul class="footerNav">
+			<li><img src="images/findkey/logo.png"></li>
+			<li>2016-2017© 遇见网® yujian.com All rights reserved.Version v1.00<br>
+				遇见网为旅行爱好者提供记录自己旅途见闻并展示的个人空间。</li>
+			<li class="item itemm"><img src="images/foot/qzone.png"></li>
+			<li class="item"><img src="images/foot/Wechat.png"></li>
+			<li class="item"><img src="images/foot/Weibo.png"></li>
+		</ul>
+		<!--<ul class="footerNav1">
+			<li class="item itemm"><img src="images/foot/qzone1.png"></li>
+			<li class="item"><img src="images/foot/Wechat1.png"></li>
+			<li class="item"><img src="images/foot/Weibo1.png"></li>
+		</ul>-->
+	</div>
+	<div class="logining">
+		<div class="titleLogin"><img src="images/login/logo.png">&nbsp;&nbsp;千风万景中遇见你</div>
+		<div class="Findkey">
+			<div class="titleli">找回密码</div>
+			<input type="text" name="" placeholder="&nbsp输入用于登录的邮箱地址">
+			<input type="text" name="" placeholder="&nbsp输入邮件中的验证码" class="input2">
+			<input class="sendButton" type="button" id="btn" value="免费获取验证码" />  
+			<script type="text/javascript">  
+				var wait=60;  
+			function time(o) {  
+        		if (wait == 0) {  
+            		o.removeAttribute("disabled");            
+            		o.value="免费获取验证码";  
+            		wait = 60;  
+        		} else {  
+            		o.setAttribute("disabled", true);  
+            		o.value="重新发送(" + wait + ")"; 
+            		wait--;   
+            setTimeout(function() {  
+                time(o)  
+            	},  
+            	1000)  
+        		}  
+    		}  
+			document.getElementById("btn").onclick=function(){time(this);}  
+			</script>
+			<div class="checkButton">完成验证</div>
+			<span class="tip1">想起密码？现在<a href="login.html">登录</a></span>
+		</div>
+	</div>
+</body>
+</html>

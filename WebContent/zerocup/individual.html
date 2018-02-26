@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>个人主页</title>
+	<link rel="stylesheet" type="text/css" href="css/individual.css">
+	<link rel="shortcut icon" type="image/x-icon" href="images/logo11.ico" />
+	<script type="text/javascript" src="js/individual.js"></script>
+	<script src="js/XMLHttpRequest.js"></script>
+	<script src="js/individual.js"></script>
+	<script src="js/fenye.js"></script>
+	<script src="js/houtai.js"></script>
+</head>
+<body>
+	<div class="navFirst">
+		<div class="littleNav1"></div>
+		<div class="littleNav2">
+			<ul>
+				<li class="list1"><img src="images/individual/logo.png"></li>
+				<li class="list2">&nbsp;在千万风景中遇见你</li>
+				<li class="list3"><a href="index.html">首页</a></li>
+				<li class="list3">精选</li>
+				<li class="list3">邂逅</li>
+				<li class="list4"><img id="xtx" ></li>
+				<li class="list5">消息</li>
+				<li class="list6"><img src="images/individual/xiaohuabi.png"></li>
+			</ul>
+		</div>
+
+		<div class="bigtouxiang"><img id="big_touxiang" src=""></div>
+		<div class="personalintroduction"><a id="user_name"></a></div>
+
+
+	</div>
+	<div class="navSecond">
+		<ul>
+			<li class="firstpagenav1"><img src="images/individual/Nav-zhuye.png"><a onclick="firstpageblock()">&nbsp;主页</a></li>
+			<li><img src="images/individual/Nav-rizhi.png"><a onclick="Diaryblock()">&nbsp;日志</a></li>
+			<li><img src="images/individual/Nav-zhaopianqiang.png"><a onclick="photowallblock()">&nbsp;照片墙</a></li>
+			<li><img src="images/individual/Nav-zuji.png"><a onclick="footfingerblock()">&nbsp;足迹</a></li>
+			<li><img src="images/individual/Nav-pinglunban.png"><a onclick="argumentblock()">&nbsp;评论板</a></li>
+			<li><img src="images/individual/Nav-shezhi.png"><a onclick="settingblock()">&nbsp;设置</a></li>
+		</ul>
+	</div>
+	<div class="firstpage" id="firstpage">
+		<div class="centerleft">
+			<div class="diary">
+				<ul>
+					<li class="diarylist21">日志&nbsp;&nbsp;&nbsp;<a id="rizhi_num"></a></li>
+					<li class="diarylist21">足迹&nbsp;&nbsp;&nbsp;<a id="zuji_num"></a></li>
+					<li class="diarylist22 diarylist23"><img src="images/individual/diary21.png"><a id="yonghuid">&nbsp;&nbsp;</a></li>
+					<li class="diarylist22 diarylist24"><img src="images/individual/diary22.png">注册于<a id="zhuceriqi"></a></li>
+					<li class="diarylist22 diarylist24"><img src="images/individual/diary23.png"><a id="yonghushengri"></a></li>
+					<li class="diarylist22 diarylist25"><img src="images/individual/diary24.png"><a id="juzhudi"></a></li>
+					<li class="diarylist27 diarylist26"><img src="images/individual/diary25.png"><a id="biaoqian"></a></li>
+					<li class="diarylist27"></li>
+				</ul>
+			</div>
+			<div class="notice">
+				<ul>
+					<li class="notice1">公告</li>
+					<li class="notice2"><a id="gonggao"></a></li>
+				</ul>
+			</div>
+			<div class="recentdiary">
+				<ul>
+					<li class="recentdiary1" onclick="Diaryblock()">最近的日志</li>
+					<li id="zdiary" class="recentdiary3"></li>
+					<li class="recentdiary4" onclick="Diaryblock()">查看更多 》</li>
+				</ul>
+			</div>
+			<div class="recentphoto">
+				<ul id="zphoto">
+					<li class="recentphoto1" onclick="photowallblock()">最近照片</li>
+				</ul>
+			</div>
+		</div>
+		<div class="centerright">
+			<div class="arguement">
+				<ul>
+					<li class="arguement1"><img src="images/individual/firstpage/centerright1.png"></li>
+					<li class="arguement2"><input type="text" name="" placeholder="&nbsp;&nbsp;标题……"></li>
+					<li class="arguement3"><textarea cols=40 rows=4 placeholder="&nbsp;&nbsp;内容"></textarea></li>
+					<li class="arguement4"><img src="images/individual/firstpage/addpicture.png"></li>
+					<li class="arguement5">发布</li>
+				</ul>
+			</div>
+			<div class="personalrecentphoto">
+				<ul id="zphoto1">
+					<li class="personalrecentphoto1"><img id="small_touxiang" ></li>
+					<li class="personalrecentphoto2"><a id="user"></a><br><a id="zphototime">2016-11-11 11:34</a>&nbsp;&nbsp;  晒了新照片&nbsp;&nbsp;<a id="zphototitle" onclick="photowallblock()">《成都之行》</a></li>
+				</ul>
+			</div>
+			<div class="personalrecentdiary">
+				<ul>
+					<li  class="personalrecentdiary1"><img id="small_touxiang1" ></li>
+					<li class="personalrecentdiary2"><a id="user1"></a><br><a id="zdiarytime"></a>&nbsp;&nbsp;  晒了新日志&nbsp;&nbsp;<a onclick="Diaryblock()" id="zdiarytitle1"></a></li>
+					<li class="personalrecentdiary3"><img id="zdiaryphoto"  onclick="Diaryblock()"></li>
+					<li class="personalrecentdiary4" id="zdiary1" onclick="Diaryblock()"></li>
+					<li class="personalrecentdiary5">13&nbsp;喜欢&nbsp;&nbsp;&nbsp;8&nbsp;评论</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="Diary" id="Diary">
+		<div class="diarylist">
+			<ul id="diarylist">
+				<li class="diarylist11">&nbsp;&nbsp;日志列表</li></ul>
+		</div>
+		<div id="drz" class="mydiary">
+			<div class="mydiary1">&nbsp;&nbsp;我的日志<div>写日志</div></div>
+		</div>
+		<div class="writingdiary">
+			
+		</div>
+	</div>
+	<div class="photowall" id="photowall">
+		<div class="photolist">
+			<ul id="photolist">
+				<li class="photolist1">相册列表</li>
+
+			</ul>
+		</div>
+		<div id="dxc" class="myphoto">
+				<div class="myphoto1">我的照片墙<div>晒照片</div></div>
+		</div>
+	</div>
+	<div class="footfinger" id="footfinger">
+		<div class="footfingerlittle">
+			<div class="footfingertitle">足迹勋章&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="fmNum">3</a></div>
+			<div class="footfingerpicture">
+				<ul id="footmark"></ul>
+			</div>
+		</div>
+	</div>
+	<div class="argument" id="argument">
+		<div class="littleargument">
+			<div class="pinglunbantitle">评论板</div>
+			<div class="otherargument">
+				<ul id="parentUl">
+
+					<table id="table">
+						<tr>
+							<td width='80px' height='50px'><div class='pinglunbantouxiang'><img src='images/individual/firstpage/pinglunbantouxiang.png' /></div> </td>
+							<td width="1000px" height="100px">半藏&nbsp;于2016-11-11&nbsp;16:25:22发表评论<br><br>岛田家的主人回来了。 </td>
+						</tr>
+						<tr>
+							<td width='80px' height='50px'><div class='pinglunbantouxiang'><img src='images/individual/touxiang3.png' /></div> </td>
+							<td width="1000px" height="100px">珈の玲&nbsp;于2016-11-18&nbsp;20:50:35发表评论<br><br>想念那段短暂却又美好的日子 </td>
+						</tr>
+					</table>
+					<table width="60%" align="right">
+						<tr><td><div id="barcon" name="barcon"></div></td></tr>
+					</table>
+				</ul>
+
+			</div>
+			<div class="sendargument">
+				<div class="sendargumenttitle">发表评论</div>
+				<textarea placeholder="&nbsp;&nbsp;Text&nbsp;area&nbsp;content" id="pl"></textarea>
+				<div id="div" onclick="addOne();" class="sendargumentmakesure">确定</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="setting" id="setting">
+		<div class="littlesetting">
+			<div class="privatesetting">
+				<div class="privatesettingwords">隐私设置
+				</div>
+				<div class="settingboxwords" style="clear: both">
+				游客访问:<br>
+				评论板:
+				</div>
+				<div class="settingbox">
+				<div style="width: 361px;">
+					<input type="checkbox" id="checkbox-8-4" />
+					<label for="checkbox-8-4"></label>
+				</div>
+				<div style="width: 361px;">
+					<input type="checkbox" id="checkbox-8-5" />
+					<label for="checkbox-8-5"></label>
+				</div>
+				</div>
+			</div>
+			<div class="noticesetting">
+				<div class="noticesettingtitle">我的公告设置</div>
+				<textarea placeholder="&nbsp;Text area content"></textarea>
+				<div class="noticesettingmakesure">确定</div>
+			</div>
+			<div class="fixsetting">
+				<div class="fixsettingtitle">修改我的信息	
+				</div>
+				<div class="fixsettingbirth">
+					<div>生日:</div>
+					<form name="reg_testdate">
+  						<select name="YYYY" onchange="YYYYDD(this.value)">
+    						<option value="">请选择 年</option>
+  						</select>
+  						<select name="MM" onchange="MMDD(this.value)">
+    						<option value="">选择 月</option>
+  						</select>
+  						<select name="DD">
+    						<option value="">选择 日</option>
+  						</select>
+					</form>
+				</div>
+				<div class="fixsettingliveplace">
+					<div>居住地:</div>
+					<input type="text" name="" placeholder="请输入你的地址">
+				</div>
+				<div class="fixsettingmakesure">保存</div>
+			</div>
+			<div class="fixmytag">
+				<div class="fixmytagtitle">我的标签<a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 / 5</a></div>
+				<div class="mytags">
+					<div class="mytagtitle">动漫</div>
+					<div class="mytagdelete">删除</div>
+					<div class="mytagtitle">足球</div>
+					<div class="mytagdelete">删除</div>
+					<input placeholder="添加属于自己的标签……">
+					<div class="mytagmakesure">确定</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footNav">
+		<ul class="footerNav">
+			<li><img src="images/individual/logo.png"></li>
+			<li>2016-2017© 遇见网® yujian.com All rights reserved.Version v1.00<br>
+				遇见网为旅行爱好者提供记录自己旅途见闻并展示的个人空间。</li>
+			<li class="item itemm"><img src="images/foot/qzone.png"></li>
+			<li class="item"><img src="images/foot/Wechat.png"></li>
+			<li class="item"><img src="images/foot/Weibo.png"></li>
+		</ul>
+	</div>
+</body>
+
+</html>

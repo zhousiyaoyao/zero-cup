@@ -1,0 +1,35 @@
+@charset "utf-8";
+*{
+	margin: 0;
+	padding: 0;
+}
+.mapBackground{
+	width: 100%;
+	height:700px;
+	background-color: #222327;
+}
+.map{
+	width:80%;
+	height:90%;
+	margin-left: 10%;
+	margin-top:3%;
+	background-color: #000;
+	float: left;
+}
+.map img{
+	width: 80%;
+	height:100%;
+	position:absolute;
+}
+.map img:hover{
+	width: 85%;
+	height: 105%;
+}
+.map1{
+	position: absolute;
+	z-index: 0;
+}
+.Xinjiang:hover{
+	width: 100%;
+	height: 90%;
+}
